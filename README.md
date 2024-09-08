@@ -32,7 +32,7 @@ This project consists of a Next.js frontend dashboard application showing differ
    cd Charts-api
    ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. Create and activate a virtual environment:
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
@@ -47,8 +47,12 @@ This project consists of a Next.js frontend dashboard application showing differ
    ```
    python manage.py migrate
    ```
+5. Run tests:
+   ```
+   python manage.py test
+   ```
 
-5. Start the Django development server:
+6. Start the Django development server:
    ```
    python manage.py runserver
    ```
@@ -74,9 +78,9 @@ This project consists of a Next.js frontend dashboard application showing differ
 
 This project combines a Next.js frontend for a dynamic and responsive dashboard with a Django backend API for data visualization. 
 
-In the Django api, I started with registering my app(charts) and other third party apps like django restframework that I would be using to build my RESTAPI and corheaders to allow for cross-origin requests from my frontend application in the settings.py file. Next was to create api endpoints in my views.py returning Json reponses for my frontend application to consume and then finally created a urls.py file to map my api endpoints to urls.
+In the Django API, I started with registering my app(charts) and other third party apps like django restframework that I would be using to build my RESTAPI and corheaders to allow for cross-origin requests from my frontend application in the settings.py file. Next was to create API endpoints in my views.py returning Json reponses for my frontend application to consume and then finally created a urls.py file to map my api endpoints to urls.
 
-Nextjs was used for my frontend application. I created the dashboard app using the global npm package and then added the Recharts library to create interactive and visually appealing data visualization charts in the dashboard. I also used the TypeScript language to add type safety to my code and the ESLint linter to ensure code quality. I customized the candlestick chart to display the open, close, high, and low values in a visually appealing manner since the recharts library does not provide this functionality out of the box.
+Nextjs was used for my frontend application. I created the dashboard app using the global npm package(npx-create-app) and then added the Recharts library to create interactive and visually appealing data visualization charts in the dashboard. I also used the TypeScript language to add type safety to my code and the ESLint linter to ensure code quality. I customized the candlestick chart to display the open, close, high, and low values in a visually appealing manner since the recharts library does not provide this functionality out of the box.
 
 The separation of frontend and backend allows for independent scaling and maintenance of each part of the application, while the use of a RESTful API lets the frontend application communicate with the backend API.
 
