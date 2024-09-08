@@ -72,7 +72,7 @@ This project consists of a Next.js frontend dashboard application showing differ
 
 ## Approach and Thought Process
 
-This project combines a Next.js frontend for a dynamic and responsive dashboard with a Django backend API data management and processing. 
+This project combines a Next.js frontend for a dynamic and responsive dashboard with a Django backend API for data visualization. 
 
 In the Django api, I started with registering my app(charts) and other third party apps like django restframework that I would be using to build my RESTAPI and corheaders to allow for cross-origin requests from my frontend application in the settings.py file. Next was to create api endpoints in my views.py returning Json reponses for my frontend application to consume and then finally created a urls.py file to map my api endpoints to urls.
 
